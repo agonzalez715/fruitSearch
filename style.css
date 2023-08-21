@@ -1,0 +1,56 @@
+* {
+  /* box-sizing: border-box; */
+}
+
+:focus {
+ /* TODO */
+}
+
+body {
+  /* TODO */
+}
+
+input {
+ /* TODO */
+}
+
+.search-container {
+ /* TODO */
+}
+.search-container input,
+.search-container .suggestions {
+  /* TODO */
+}
+.search-container input {
+ /* TODO */
+}
+.search-container .suggestions {
+   /* TODO */
+}
+
+ul {
+  list-style-type: none; /*remove bullet points if any*/
+  margin: 0; /* remove margin*/
+  padding: 0; /* remove padding*/
+  border: 1px solid #ccc; /* adddding a light border*/
+  max-height: 150px;/* set maximum heigh*/
+  overflow-y: auto; /* add a scrollbar if there are many items*/
+  display: none; /* hide the list by default*/
+}
+
+ul.has-suggestions {
+  display: block; /* show the list when it has suggestions */
+}
+
+ul li {
+  padding: 8px 12px; /* add some space around the items */
+  cursor: pointer; /* indicate the items are clickable*/
+}
+
+ul li:hover {
+  background-color: #eee; /* change background color when hovered over */
+}
+
+input {
+   /* TODO */
+}
