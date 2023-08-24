@@ -1,31 +1,48 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :focus {
- /* TODO */
+  box-shadow: none;
+  border:none;
 }
 
 body {
-  /* TODO */
+  background-image: linear-gradient(to right, blue , purple);
 }
 
 input {
- /* TODO */
+  text-decoration-color: white;
+  width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 .search-container {
- /* TODO */
+ width: 600px;
+ background-color: white;
+ margin: 200px auto 0;
 }
-.search-container input,
+
+
+
 .search-container .suggestions {
-  /* TODO */
+  width: 600px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px solid grey;
+  padding: 0;
 }
-.search-container input {
- /* TODO */
-}
+
+/* .search-container input {
+ 
+} */
+
+
 .search-container .suggestions {
-   /* TODO */
+   text-decoration: underline;
 }
 
 ul {
@@ -48,9 +65,5 @@ ul li {
 }
 
 ul li:hover {
-  background-color: #eee; /* change background color when hovered over */
-}
-
-input {
-   /* TODO */
+  background-color: red; /* change background color when hovered over */
 }

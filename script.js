@@ -19,20 +19,23 @@ function search(str) {
 
 //this function gets ran every time the user types in the search bar 
 function searchHandler(e) {
+	// console.log('TEST')
 	let inputVal = e.target.value; //grabs the current value from the search input. e.target specifies the html element that triggered the event, value gets the text inside 
 	let results = search(inputVal); //use the search function to get the matching results 
 	showSuggestions(results, inputVal); //display those results using the showSuggestions function
+	
 }
 
 //this function displays the results from the ul element in the html file
 function showSuggestions(results, inputVal) {
+	suggestions.innerHTML = '';
+	// console.log(results);
 //we need to clear any esisting suggestions
-const ul = suggestions.querySelector('ul');
-ul.innerHTML = '';//clearing any previous suggestions 
+const ul = document.querySelector('ul');
 
 //if there are no results and the input is empty, we dont need to display anything
 if (results.length === 0 && inputVal.length === 0) return;
-
+	// useSuggestion();
 //we need to loop through each result and add it to the ul in the html
 for (let i = 0; i < results.length; i++) {
 	let li = document.createElement('li'); //create new list item
@@ -51,8 +54,11 @@ if (results.length > 0) {
 
 //this function most likely allows the user to use the suggestion that is displayed and completes it in the search bar 
 function useSuggestion(e) {
-	// TODO
+	if (e.target.tagName === 'LI') {
+		input.value = e.target.textContent;
+		document.querySelector('ul').innerHTML = '';
+	}
 }
 
-input.addEventListener('keyup', searchHandler);//adding event listener to input variable, in this case the search bar itself on the keu up
+input.addEventListener("keyup", searchHandler);//adding event listener to input variable, in this case the search bar itself on the keu up
 suggestions.addEventListener('click', useSuggestion);//adds an event listener to the suggestions variable created, in this case the ul elements within the suggestion class
